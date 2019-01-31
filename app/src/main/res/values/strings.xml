@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">Dicee</string>
+    <string name="app_name">DiceeC</string>
     <string name="button_text">ROLL IT BABY!</string>
+    <string name="desc_text">Roll 2 dice</string>
+    <string name="casino_logo">Casino Logo</string>
+    <string name="right_dice_image">Right Dice Image</string>
+    <string name="left_dice_image">Left Dice Image</string>
 </resources>

@@ -16,16 +16,19 @@
 
     <ImageView
         android:id="@+id/image_logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="235dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/image_right"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_rightlogo"
-        app:layout_constraintStart_toStartOf="@+id/guideline_leftlogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image_left"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.434"
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/casino_logo" />
 
 
     <ImageView
@@ -34,12 +37,13 @@
         android:layout_height="150dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/image_right"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dice2" />
+        app:layout_constraintBottom_toTopOf="@id/image_right"
+        app:srcCompat="@drawable/dice2"
+        android:contentDescription="@string/left_dice_image" />
 
     <ImageView
         android:id="@+id/image_right"
@@ -51,9 +55,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/image_left"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dice1" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_left"
+        app:srcCompat="@drawable/dice1"
+        android:contentDescription="@string/right_dice_image" />
 
 
     <Button
@@ -61,29 +66,15 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:contentDescription="@string/desc_text"
         android:text="@string/button_text"
         android:textColor="#ffffff"
-        android:textSize="25sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_rightlogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.90" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline_leftlogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
